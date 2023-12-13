@@ -4,28 +4,91 @@ body {
     padding: 0px 10px;
 }
 
-.h1 {
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
-    font-size: 40px;
-    margin: -68px -16px 200px -18px;
-    padding: 12px 0px 0px 20px;
-    width: auto;
-    height: 90px;
+
+.fa-search {
+    box-sizing: border-box;
+    outline: none;
+    border: none;
 }
+
+.search-input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav {
+    width: 103%;
+    background-color: #eee;
+    padding: 15px;
+    margin: -5px;
+    top: 0;
+    z-index: 10;
+    margin-bottom: 100px;
+    position: relative;
+    left: -44px;
+    top: -5px;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 35px;
+    color: black;
+    padding: 0;
+    position: relative;
+    left: -87px;
+
+}
+
 
 .logout {
-    width: fit-content;
+    outline: none;
+    display: inline-block;
+
 }
 
-.this {
-    font-size: 40px;
-    font-style: oblique;
-    border-bottom: 5px solid rgb(255, 0, 0);
-    border-radius: 20px;
-    margin: 50px 400px 50px;
-    font-size: 40px;
+.btn {
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: rgb(144, 156, 178);
+    color: white;
+    position: relative;
+    right: -140px;
+
 }
+
+.btn:hover {
+    color: black;
+    background-color: yellow;
+}
+
+.search-bar {
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 15px;
+}
+
+.search-bar input[type="search"] {
+    background: transparent;
+    width: 250px;
+    margin-left: 10px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+}
+
 
 .text,
 .text2 {
@@ -73,6 +136,8 @@ body {
 .img8 {
     object-fit: cover;
     transition-duration: 0.5s;
+    box-shadow: 1px 1px 8px rgb(0, 0, 0);
+
 }
 
 
@@ -86,12 +151,28 @@ body {
 }
 
 .fa-phone {
-    margin-right: 225px;
+    margin-right: 313px;
+    padding: 20px;
+    font-size: 30px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 60%;
+    height: 18px;
+    transition-duration: 0.4s;
 }
 
 .fa-envelope {
-    margin-left: 225px;
-    margin-right: 275px;
+    margin-left: 122px;
+    margin-right: 335px;
+    padding: 20px;
+    font-size: 30px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 60%;
+    height: 18px;
+    transition-duration: 0.4s;
 }
 
 
@@ -124,21 +205,6 @@ footer {
     height: 80px;
 }
 
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 25px;
-    text-align: center;
-    text-decoration: none;
-    /* margin: 5px 0px 0px 150px; */
-    border-radius: 60%;
-    height: 18px;
-    transition-duration: 0.4s;
-
-
-
-}
-
 .fa:hover {
     color: rgb(0, 0, 0);
     background-color: white;
@@ -151,8 +217,16 @@ footer {
 .fa-facebook {
     color: rgb(255, 255, 255);
     background-color: red;
-    margin: 75px 225px 25px 0;
+    margin: 100px 290px 25px 0;
     box-shadow: 0 0 5px red, 0 0 25px red;
+    transition-duration: 0.4s;
+    padding: 20px;
+    font-size: 30px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 60%;
+    height: 18px;
     transition-duration: 0.4s;
 }
 
@@ -162,6 +236,14 @@ footer {
     background-color: red;
     box-shadow: 0 0 5px red, 0 0 25px red;
     transition-duration: 0.4s;
+    padding: 20px;
+    font-size: 30px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 60%;
+    height: 18px;
+    transition-duration: 0.4s;
 
 }
 
@@ -170,16 +252,9 @@ footer {
     font-style: oblique;
     font-size: 20px;
     display: inline-block;
-    background-color: yellow;
-    border-radius: 30px;
+    background-color: #eee;
+    border-radius: 20px;
     padding: 15px;
-}
-
-.contactus:hover {
-    background-color: #a17af7;
-    color: white;
-
-
 }
 
 #more {
@@ -297,4 +372,62 @@ caption {
 
 .tr {
     background-color: #f5abab;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: yellow;
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: yellow;
+    border-radius: 50%;
+
+}
+
+audio::-webkit-media-controls-current-time-display {
+    color: black;
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+    color: black;
+}
+
+audio::-webkit-media-controls-timeline {
+    border-radius: 40px;
+    background-color: yellow;
+}
+
+audio::-webkit-media-controls-volume-slider {
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+audio::-webkit-media-controls-volume-slider {
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+audio::-webkit-media-controls-mute-button {
+    border-radius: 50%;
+    background-color: yellow;
+}
+
+audio {
+    margin: 10px 0px;
+}
+
+.fa-sign-out {
+    padding: 2px;
+    font-size: 30px;
+    width: 25px;
+    height: 18px;
+    margin-left: 4px;
+    font-size: 30px;
+    text-decoration: none;
+    border-radius: 60%;
+    height: 18px;
 }
