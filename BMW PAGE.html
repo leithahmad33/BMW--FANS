@@ -11,8 +11,52 @@
 
     <title>BMW-PAGE</title>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Poppins:wght@500&display=swap"
+        rel="stylesheet">
+    <style>
+        .scrolltop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 10px 15px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 5px;
+            border-radius: 1px solid #fff;
+            cursor: pointer;
+            transition: all 0.5s ease 0s;
+        }
 
+        .scrolltop:hover {
+            background-color: #f7f7f7f7;
+            color: #000;
+
+        }
+    </style>
 </head>
+
+<script>
+    function scrolltotop() {
+        window.scrollTo(0, 0);
+    }
+    function scrolltobottom() {
+        window.scrollTo(0, 5000);
+
+    }
+    function myFunction() {
+        var x =
+            document.getElementById("about");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        }
+        else {
+            x.style.display = "block";
+        }
+
+    }
+</script>
 
 <body>
     <nav>
@@ -22,16 +66,21 @@
                 <i class="fa fa-search"></i>
                 <input type="search" placeholder="search">
             </div>
+            <div onclick="scrolltobottom()" class="contact-nav">
+                <button class="btn-contact">contact us</button>
+            </div>
+            <button class="btn-aboutus" onclick="myFunction()">about</button>
             <div class="logout">
-                <button type="button" formaction="index.html" class="btn">Logout<span
-                        class="fa fa-sign-out"></span></button>
+                <a href="index.html" class="btn">Logout<span class="fa fa-sign-out"></span></a>
             </div>
         </div>
+        <div onclick="scrolltotop()" class="scrolltop"><i class='fa fa-arrow-up'></i></div>
     </nav>
-
-
-
-
+    <div class="about-dis" id="about">We are a group of BMW fans. Our website contains a lot of useful and wonderful
+        information
+        that you will not find on any other website. We are here to keep up with everything related to the company's
+        developments, and to provide you with all advice to ensure the best experience. We are always by your side. If
+        you have any question, you can contact us and we will be happy. Reply as soon as possible.</div>
 
 
 
@@ -105,7 +154,7 @@
         exclusive “Competition Sport” version for extraordinary driving experiences.
     </p>
 
-    <div>
+    <div class="m5-images">
         <img src="gg/1.jpg" alt="" width="25%" height="350px" class="img1"> <img src="images/2.jpg" alt="" width="25%"
             height="350px" class="img2">
         <img src="images/3.jpg" alt="" width="25%" height="350px" class="img3">
@@ -187,32 +236,40 @@
             </tbody>
         </table>
     </div>
-
-    <img src="gg/5.jpg" alt="" width="25%" height="350px" class="img5"> <img src="gg/6.jpg" alt="" width="25%"
-        height="350px" class="img6">
-    <img src="gg/7.jpg" alt="" width="25%" height="350px" class="img7">
-    <img src="gg/8.jpg" alt="" width="24%" height="350px" class="img8">
+    <div class="m4-images">
+        <img src="gg/5.jpg" alt="" width="25%" height="350px" class="img5"> <img src="gg/6.jpg" alt="" width="25%"
+            height="350px" class="img6">
+        <img src="gg/7.jpg" alt="" width="25%" height="350px" class="img7">
+        <img src="gg/8.jpg" alt="" width="24%" height="350px" class="img8">
+    </div>
 
     <audio controls>
         <source src="images/soundm4.mp3" type="audio/mpeg">
     </audio>
+    <div class="next-pre">
+        <a href="index.html" class="previous">&laquo;Previous</a>
+        <a href="#" class="next">Next&raquo;</a>
+    </div>
     <hr color="yellow">
-    <center>
-        <p class="contactus">contact us</p>
-    </center>
-    <div class="social">
-        <a href="mailto:leithahmad55@gmail.com" class="fa fa-envelope"></a>
-        <a href="tel:+963996792597" class="fa fa-phone"></a>
-        <a href="https://www.facebook.com/people/Leith-Ahmad/pfbid0DaMNvew6jm9hNUPBNfcw8YepWUumdwTNgWEq5GCZKZnabhLvzWpH7CZ6ACij28mBl/?mibextid=ZbWKwL"
-            class="fa fa-facebook" target="_blank"></a>
-        <a href="https://instagram.com/laith_ah_?igshid=NGVhN2U2NjQ0Yg==" class="fa fa-instagram" target="_blank"></a>
+    <div class="contact-section">
+        <center>
+            <p class="contactus">contact us</p>
+        </center>
+        <div class="social">
+            <a href="mailto:leithahmad55@gmail.com" class="fa fa-envelope"></a>
+            <a href="tel:+963996792597" class="fa fa-phone"></a>
+            <a href="https://www.facebook.com/people/Leith-Ahmad/pfbid0DaMNvew6jm9hNUPBNfcw8YepWUumdwTNgWEq5GCZKZnabhLvzWpH7CZ6ACij28mBl/?mibextid=ZbWKwL"
+                class="fa fa-facebook" target="_blank"></a>
+            <a href="https://instagram.com/laith_ah_?igshid=NGVhN2U2NjQ0Yg==" class="fa fa-instagram"
+                target="_blank"></a>
+        </div>
     </div>
 </body>
 <hr color="yellow">
 <hr color="yellow">
 <footer>
-    &copy; Copyright 2021
-    <center>&hearts;made with love&hearts;</center>
+    <span style="color: white;">&copy; Copyright 2021</span>
+    <center style="color: white;">&hearts;made with love&hearts;</center>
 
 
 </footer>
